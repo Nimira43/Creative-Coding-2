@@ -23,9 +23,12 @@ const patternImage = document.getElementById('patternImage')
 const pattern1 = ctx.createPattern(patternImage, 'no-repeat')
 
 ctx.strokeStyle = pattern1
-ctx.shadowOffsetX = 2
-ctx.shadowOffsetY = 2
-ctx.shadowColor = '#ff4500'
+
+// Bring the following three line in - Demo 2
+
+// ctx.shadowOffsetX = 2
+// ctx.shadowOffsetY = 2
+// ctx.shadowColor = '#ff4500'
 
 
 class Line {
@@ -77,6 +80,8 @@ class Line {
 
 const linesArray = []
 const numberOfLines = 50
+// comment out above line and bring back below line for Demo 1 or Demo 2. Don not use the below line for Demo 2
+// const numberOfLines = 200
 for (let i = 0; i < numberOfLines; i++) {
     linesArray.push(new Line(canvas))
 }

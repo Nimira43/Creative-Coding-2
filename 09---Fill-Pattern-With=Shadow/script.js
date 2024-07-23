@@ -4,6 +4,9 @@ canvas.width = 700
 canvas.height = 900
 
 ctx.lineWidth = 10
+ctx.shadowOffsetX = 2
+ctx.shadowOffsetY = 2
+ctx.shadowColor = 'black'
 
 const gradient1 = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
 gradient1.addColorStop('0.2', 'pink')
@@ -22,10 +25,8 @@ gradient2.addColorStop('0.8', 'blue')
 const patternImage = document.getElementById('patternImage')
 const pattern1 = ctx.createPattern(patternImage, 'no-repeat')
 
-ctx.strokeStyle = pattern1
-ctx.shadowOffsetX = 2
-ctx.shadowOffsetY = 2
-ctx.shadowColor = '#ff4500'
+ctx.strokeStyle = gradient1
+
 
 
 class Line {
